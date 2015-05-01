@@ -1,0 +1,799 @@
+<html itemscope="" itemtype="http://schema.org/Product">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta itemprop="name" content="BLUESIM">
+    <title>BLUESIM</title>
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="lib/d3v3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sim-0.26.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/global.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/image-view.js" type="text/javascript" charset="utf-8"></script>
+    <script src="animations/stat_animation_manager.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/queuing-min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="js/hover.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="js/statistician.js" type="text/javascript" charset="utf-8"></script>
+    <script src="animations/path_animator.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="entities/data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/sink.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/source.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/server.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/reverser.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/cloner.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/splitfunction.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/thermo.js" type="text/javascript" charset="utf-8"></script>
+    <script src="entities/func.js" type="text/javascript" charset="utf-8"></script>
+   <script src="entities/stack.js" type="text/javascript" charset="utf-8"></script>
+    <script src="graph/simresults.js" type="text/javascript" charset="utf-8"></script>
+    <script src="graph/graph-man.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/udo-manager.js" type="text/javascript" charset="utf-8"></script>
+    <script src="graph/statman.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/gm.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ui_helper.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/toolbar.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/canvas_parent.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/on_off_switch.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.Core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js "type="text/javascript" harset="utf-8"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="js/initialize.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/models.js" type="text/javascript" charset="utf-8"></script>
+
+    
+    <link rel="stylesheet" href="css/queuing.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="panel panel-default" id = "outer-div">
+      <div class="panel-heading" id="bigheader">
+        <img id ="blueSimLogo" src="images/BLUESIM_FINAL.png" style="height:5%;">
+      </div>
+      <div class="panel-body">
+        <div id="content">
+          <div id="main_layout" style="min-width: 100em;">
+            <div id="progressbar" class="ui-progressbar" role="progressbar" aria-valuemin="0" 
+                    aria-valuemax="100" aria-valuenow="0" style="display: none;">
+              <div class="ui-progressbar-value" style="display: none; width: 0%;"></div>
+            </div>
+            <span id="sim_play_ops" style="display: none;">
+              <button id="pause_sim" type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pause
+              </button>
+              <button id="stop_sim" type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop
+              </button>
+            </span>
+            <span class="btn-toolbar" role="toolbar" aria-label="toolbarz">
+              <span id="file_ops">
+                <button id="clear_screen" type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Clear
+                </button>
+                <div id="import_file" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import
+                </div>
+                <div id="export_file" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Export
+                </div>
+                <div id="download_json" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Download JSON
+                </div>
+                <div id="download_data" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download Data
+                </div>
+              </span>
+              <span id="sim_ops">
+                <div id="graph_data" type="button" class="btn btn-default btn-sm" onclick='setSimulationResults()'>
+                  <span class="glyphicon glyphicon-signal" aria-hidden="true"></span><span style="margin-left: 0.5em;">Graph Data</span>
+                </div>
+                <div id="use_udo" type="button" class="btn btn-default btn-sm" onclick='udoman.toggleUseUDO()'>
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span><span style="margin-left: 0.5em;">Not Using UDO</span>
+                </div>
+                <div id="add_udo" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add UDO
+                </div>
+                <div id="config_sim" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                  <span id="config_label" class="ui-button-text">8:00 hours</span>
+                </div>
+                <div id="play_sim" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-play" aria-hidden="true"></span>Simulate
+                </div>
+              </span>
+            </span>
+          </div>
+          <span>
+            <div id="canvas">
+              <!-- This function makes accordian draggable!-->
+              
+              <script>
+              $(function() {
+              var forms = ["#simulation_dialog",
+              "#server_form",
+              "#stack_form",
+              "#graph_form",
+              "#source_form",
+              "#thermo_form",
+              "#func_form",
+              "#reverser_form",
+              "#cloner_form",
+              "#udo_form",
+              "#hover_form",
+              "#splitter_form",
+              "#splitfunc_form",
+              "#funcblock_form",
+              "#accordion",
+              "#color_key"
+              ];
+
+              for (var i = 0; i < forms.length; i++) {
+              $(forms[i]).draggable();
+              }
+              });
+              </script>
+              <div id="accordion" draggable="true" style="width: 23.5em;" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist" draggable="true">
+                <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0">
+                <a href="#">Instructions</a>
+                </h3>
+                <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel">
+                  <p style="font-size: 14px;font-weight: normal;"><strong>Adding objects.</strong> <br />
+                    Drag n' drop items on the left into canvas to begin creating your simulation.
+                    <br /><br />
+                    <strong>Connecting.</strong><br />
+                    Drag 
+                    <img src="images/blue-arrow-old.png" class="inline shift-down" width="10%"></img> and drop over to the destination object.
+                    <br /><br />
+                    <strong>Properties, Disconnect, and Delete.</strong><br />
+                    Double-click object on canvas.
+                    <br /><br />
+					          <strong>Documentation</strong><br/>
+					           Click <a href="Documentation/input.html" target="_blank">here</a> for the full documentation
+
+                  </p>
+                </div>
+                <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-content-active" role="tab" aria-exapnded="false" aria-selected="false" tabindex="1">
+                <a href="#">Example Simulations</a>
+                </h3>
+                <div id="simulation_list" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+                  <ul class="navigation" style="width: 100%; height: auto">
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['bank_teller']);">Bank Teller</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['product_testing']);">Product Testing</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['DMV']);">DMV</button></a></li>
+                    <!-- <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['population']);">Population Model</button></a></li> -->
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['predator_prey']);">Predator/Prey</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['college_pathways']);">College Pathways</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['compsci_path']);">Comp. Sci. Path at UMD</button></a></li>
+                  </ul>
+                </div>
+                
+                <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-content-active" role="tab" aria-exapnded="false" aria-selected="false" tabindex="1">
+                <a href="#">Random Distributions</a>
+                </h3>
+                <div id="distribution_list" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+                  <ul class="navigation" style="width: 100%; height: auto;">
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_gaussian']);">Gaussian histogram</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_exponential']);">Exponential histogram</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_pareto']);">Pareto histogram</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_random']);">Random histogram</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_gamma']);">Gamma histogram</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['hist_uniform']);">Uniform histogram</button></a></li>
+                  </ul>
+                </div>
+
+                <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-content-active" role="tab" aria-exapnded="false" aria-selected="false" tabindex="1">
+                <a href="#">Examples of Basic Features</a>
+                </h3>
+                <div id="example_list" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+                  <ul class="navigation" style="width: 100%; height: auto;">
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['single_shot']);">Single Shot</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['plus_one']);">Plus One</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['real_numbers']);">Real Numbers</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['feedback_loop_increment']);">Feedback Loop</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['two_sources_two_sinks']);">Two Plots</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['cascading_waterfall']);">Cascading Loads</button></a></li>
+                    <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['simple_clone']);">Simple Clone</button></a></li>
+            <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['all_entities']);">All Entities</button></a></li>
+            <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['rounding']);">Rounding</button></a></li>
+
+          </ul>
+                </div>
+
+
+                <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-content-active" role="tab" aria-exapnded="false" aria-selected="false" tabindex="1">
+                <a href="#">Examples of Advanced Features</a>
+                </h3>
+                <div id="example_list" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+                  <ul class="navigation" style="width: 100%; height: auto;">
+            <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['sin_wave']);">Sine Wave</button></a></li>
+            <li style="font-size: 14px; font-weight: normal;"><a><button class="btn btn-primary btn-sm" type="button" onclick="QueueApp.reset(1); QueueApp.loadtext(MODELS['primitive_roots']);">Primitive Roots</button></a></li>
+
+          </ul>
+                </div>
+                </div> <!--  end of accordion  -->
+
+
+
+
+<svg id = "color_key" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 654" enable-background="new 0 0 500 654" xml:space="preserve">
+<text transform="matrix(1 0 0 1 65.6665 117.8335)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" 
+  font-size="72">&nbsp;&nbsp;&nbsp;Traffic</text>
+<rect x="70.3" y="170.6" rx="15" ry="15" fill="#c0392b" id = "red" stroke="#000000" stroke-miterlimit="10" width="132.3" height="70" rx="40" ry="40"/> 
+<rect x="70.3" y="255" rx="15" ry="15" fill="#e67e22" id = "orange" stroke="#000000" stroke-miterlimit="10" width="132.3" height="70"rx="40" ry="40"/>
+<rect x="70.3" y="339.4" rx="15" ry="15" fill="#f1c40f" id = "yellow" stroke="#000000" stroke-miterlimit="10" width="132.3" height="70" rx="40" ry="40"/>
+<rect x="70.3" y="423.8" rx="15" ry="15" fill="#2980b9" id = "blue" stroke="#000000" stroke-miterlimit="10" width="132.3" height="70" rx="40" ry="40"/>
+<rect x="70.3" y="508.1" rx="15" ry="15" fill="#27ae60"id = "green" stroke="#000000" stroke-miterlimit="10" width="132.3" height="70" rx="40" ry="40"/>
+<text transform="matrix(1 0 0 1 262.2502 219)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="36">80 - 100%</text>
+<text transform="matrix(1 0 0 1 259.25 297.1875)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="36">60 - 80%</text>
+<text transform="matrix(1 0 0 1 259.2502 381.5625)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="36">40 - 60%</text>
+<text transform="matrix(1 0 0 1 259.2498 465.9375)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="36">20 - 40%</text>
+<text transform="matrix(1 0 0 1 262.2502 550.3125)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="36">0 - 20%</text>
+</svg>
+
+
+
+
+              </div>
+            </span>
+            <div id="results"></div>
+          </div>
+          <!--<svg id="visualize" onload='$("#visualize").hide();' width="1000" height="500"></svg>-->
+        </div>
+        <!-- Dialogs. These are all hidden -->
+        <div id="simulation_dialog" title="Simulation Properties" class="settings_form" style="display: none;">
+          <div id="simulation_dialog_close" class="settings_form_close" role="button" title="">
+            <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px"></span>
+          </div>
+          <div class="form-group">
+            <label for="sim_until" style="font-size: 14px;font-weight: normal;">Duration</label><br/>
+            <input type="text" class="form-control" id="sim_until" placeholder="60 seconds" value="5000">
+            <select id="time_selector" class="form-control " onChange="QueueApp.updateSettings();">
+              <option>hours</option>
+              <option>mins</option>
+              <option>secs</option>
+            </select> <br/>
+            <label for="sim_seed" style="font-size: 14px;font-weight: normal;">Random seed</label><br/>
+            <input type="number"  class="form-control" value="null" id="sim_seed">
+            <br/>
+            <label for="max_messages" style="font-size: 14px;font-weight: normal;">Maximum entity records</label><br/>
+            <input type="number" name="resolution" class="form-control" value="3600" id="max_messages">
+          </div>
+          <div id="simulation_dialog_save" role="button" class="btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-thumbs-up"></span> Apply
+          </div>
+        </div>
+        <div id="stack_form" class="settings_form" style="display: none;">
+          <div id="stack_form_close" type"button" class="settings_form_close">
+            <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 25px; top: 10px" aria-hidden="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="stack_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+            <input type="text" class="form-control" id="stack_name" placeholder="Enter name">
+          </div>
+          <table>
+            <tr>
+              <td>
+                <input id="use_udo_button_stack" type="radio" class="medium" name="tobe" value="use" onClick="checkRadioButtonStack()" disabled><font size="3">UDO</font>
+                <input id="use_function_button_stack" type="radio" class="medium" name="tobe" value="disable" checked onClick="checkRadioButtonStack()"><font size="3">Function</font></td>
+                <td>
+                  <select name="stack_dropdown_1" id="stack_dropdown_1" class="form-control text ui-widget-content ui-corner-all" onChange="stackDropper()">
+                    <option id="stack_op1" value="gaussian">Gaussian</option>
+                    <option id="stack_op2" value="exponential">Exponential</option>
+                    <option id="stack_op3" value="pareto">Pareto</option>
+                    <option id="stack_op4" value="random">Random</option>
+                    <option id="stack_op5" value="gamma">Gamma</option>
+                    <option id="stack_op6" value="weibull">Weibull</option>
+                    <option id="stack_op7"  value="constant">Constant</option>
+                    <option id="stack_op8"  value="uniform">Uniform</option>
+                    <option id="stack_udo_0"  value=""></option>
+                    <option id="stack_udo_1"  value=""></option>
+                    <option id="stack_udo_2"  value=""></option>
+                    <option id="stack_udo_3"  value=""></option>
+                    <option id="stack_udo_4"  value=""></option>
+                  </select>
+                </td>
+              </tr>
+              <tr id="stack_param_tr1">
+                <td><label for="stack_length" style="font-size: 14px;font-weight: normal;">Parameter 1</label></td>
+                <td><input type="number" name="stack_param1" id="stack_param1" class="form-control"></td>
+              </tr>
+              <tr id="stack_param_tr2">
+                <td><label for="stack_length" style="font-size: 14px;font-weight: normal;">Parameter 2</label></td>
+                <td><input type="number" name="stack_param2" id="stack_param2" class="form-control"></td>
+              </tr>
+              <tr>
+                <td><label for="stack_length" style="font-size: 14px;font-weight: normal;">Max Queue Length<br>(-1 for infinite stack)</label></td>
+                <td><input type="number" name="stack_length" value="-1" id="stack_stack_length" class="form-control"></td>
+              </tr>
+              <tr>
+                <td><label for="num_stacks" style="font-size: 14px;font-weight: normal;">Number of Servers<br></label></td>
+                <td><input type="number" name="num_stacks" value="1" id="num_stacks" class="form-control"></td>
+              </tr>
+            </table>
+            <br/>
+            <div id="stack_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+              <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+            </div>
+            <div id="stack_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+            </div>
+            <div id="stack_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+              <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+            </div>
+          </div>
+          <div id="server_form" class="settings_form" style="display: none;">
+            <div id="server_form_close" type"button" class="settings_form_close">
+              <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 25px; top: 10px" aria-hidden="true"></span>
+            </div>
+            <div class="form-group">
+              <label for="server_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+              <input type="text" class="form-control" id="server_name" placeholder="Enter name">
+            </div>
+            <table>
+              <tr>
+                <td>
+                  <input id="use_udo_button_server" type="radio" class="medium" name="tobe" value="use" onClick="checkRadioButtonServer()" disabled><font size="3">UDO</font>
+                  <input id="use_function_button_server" type="radio" class="medium" name="tobe" value="disable" checked onClick="checkRadioButtonServer()"><font size="3">Function</font></td>
+                  <td>
+                    <select name="server_dropdown_1" id="server_dropdown_1" class="form-control text ui-widget-content ui-corner-all" onChange="serverDropper()">
+                      <option id="server_op1" value="gaussian">Gaussian</option>
+                      <option id="server_op2" value="exponential">Exponential</option>
+                      <option id="server_op3" value="pareto">Pareto</option>
+                      <option id="server_op4" value="random">Random</option>
+                      <option id="server_op5" value="gamma">Gamma</option>
+                      <option id="server_op6" value="weibull">Weibull</option>
+                      <option id="server_op7"  value="constant">Constant</option>
+                      <option id="server_op8"  value="uniform">Uniform</option>
+                      <option id="server_udo_0"  value=""></option>
+                      <option id="server_udo_1"  value=""></option>
+                      <option id="server_udo_2"  value=""></option>
+                      <option id="server_udo_3"  value=""></option>
+                      <option id="server_udo_4"  value=""></option>
+                    </select>
+                  </td>
+                </tr>
+                <tr id="server_param_tr1">
+                  <td><label for="queue_length" style="font-size: 14px;font-weight: normal;">Parameter 1</label></td>
+                  <td><input type="number" name="server_param1" id="server_param1" class="form-control"></td>
+                </tr>
+                <tr id="server_param_tr2">
+                  <td><label for="queue_length" style="font-size: 14px;font-weight: normal;">Parameter 2</label></td>
+                  <td><input type="number" name="server_param2" id="server_param2" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><label for="queue_length" style="font-size: 14px;font-weight: normal;">Max Queue Length<br>(-1 for infinite queue)</label></td>
+                  <td><input type="number" name="queue_length" value="-1" id="server_queue_length" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><label for="num_servers" style="font-size: 14px;font-weight: normal;">Number of Servers<br></label></td>
+                  <td><input type="number" name="num_servers" value="1" id="num_servers" class="form-control"></td>
+                </tr>
+              </table>
+              <br/>
+              <div id="server_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="server_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="server_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <div id="graph_form" class="settings_form" style="display: none; position: absolute;">
+              <div id="graph_form_close" type="button" class="settings_form_close" >
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div></br>
+              <div id="graph_form_to_append">
+              </div>
+              <label for="graph_form_option" style="font-size: 14px;font-weight: normal;">Choose graph type</label><br/>
+              <select name="graph_dropdown" id="graph_dropdown" class="form-control text ui-widget-content ui-corner-all" onChange="graphDropper()">
+                <option id="server_op1" value="line">Line</option>
+                <option id="server_op2" value="scatter">Scatter</option>
+                <option id="server_op3" value="histogram">Histogram</option>
+              </select> <br />
+              <div hidden id="bucket_width">
+                <label for="graph_form" style="font-size: 14px;font-weight: normal;">Bucket width   <br></label><br>
+                <input id="user_bucket_width" value=".2" type="number" min="0" class="form-control" max="4" onChange="width_chooser()">
+              </div>
+              <div id="graph_form_save" type="button" class="btn btn-success btn-xs" onclick = "renderGraphs()" >
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Graph
+              </div>
+            </div>
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <div id="source_form" title="Source Properties" class="settings_form" style="display: none; height: auto;">
+              <div id="source_form_close" type="button" class="settings_form_close" >
+                <span class="glyphicon glyphicon-remove-circle testt" style="float: right; positon: absolute; left: 22px; top: 10px " aria-hidden="true" ></span>
+              </div>
+              <div class="form-group">
+                <label for="source_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="source_name" placeholder="Enter name">
+              </div>
+              <div id="source_form_to_append">
+              </div>
+              <br/>
+              <div id="source_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="source_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="source_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="sink_form" title="Sink properties" class="settings_form" style="display: none;">
+              <div id="sink_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <div class="form-group">
+                <label for="sink_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="sink_name" placeholder="Enter name">
+              </div>
+              <br/>
+              <!--     <div id="sink_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div> -->
+              <div id="sink_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="sink_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="thermo_form" title="Thermometer properties" class="settings_form" style="display: none;">
+              <div id="thermo_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <div class="form-group">
+                <label for="thermo_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="thermo_name" placeholder="Enter name">
+              </div>
+              <br/>
+              <div id="thermo_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="thermo_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="thermo_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="func_form" class="settings_form" style="display: none; position: absolute; height: 120px; width: 215px">
+              <div id="func_form_close" type="button" class="settings_form_close" >
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 19px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <div class="form-group">
+                <label for="func_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="func_name" value="" class="form-control" placeholder="Enter name">
+              </div>
+              <div id="func_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="func_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="func_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="reverser_form" title="Reverser properties" class="settings_form" style="display: none;">
+              <div id="reverser_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <div class="form-group">
+                <label for="reverser_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="reverser_name" placeholder="Enter name">
+              </div>
+              <br/>
+              <div id="reverser_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="reverser_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="reverser_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="cloner_form" title="Cloner properties" class="settings_form" style="display: none;">
+              <div id="cloner_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+<!--               <div class="form-group">
+                <label for="cloner_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+                <input type="text" class="form-control" id="cloner_name" placeholder="Enter name">
+              </div> -->
+              <br/>
+              <div id="cloner_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+<!--               <div id="cloner_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div> -->
+              <div id="cloner_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <div id="splitter_form" title="Splitter properties" class="settings_form" style="display: none;">
+              <div id="splitter_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <div class="form-group">
+                <label for="splitter_form_perc" style="font-size: 14px;font-weight: normal;">Fraction of traffic that goes to the top channel</label><br/>
+                <input type="number" name="splitter_form_prob" id="splitter_form_perc" class="form-control" min="0" max="1" step=".1">
+              </div>
+              <br/>
+              <div id="splitter_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="splitter_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="splitter_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <!-- NOT USED  <div id="switch_form" title="Switch Properties" class="settings_form" style="display: none; position: absolute;">
+              <button id="switch_form_close" class="settings_form_close ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" title=""><span class="ui-button-icon-primary ui-icon ui-icon-close"></span><span class="ui-button-text"></span></button></br>
+              <table>
+                <tr>
+                  <td><label for="switch_form_param1">Distribution</label></td>
+                  <td><input type="number" name="switch_form_param1" id="switch_form_param1" value="" class="text ui-widget-content ui-corner-all my-text-field"></td>
+                </tr>
+                <tr>
+                  <td><label for="switch_form_param1">Param 1</label></td>
+                  <td><input type="number" name="switch_form_param1" id="switch_form_param1" value="" class="text ui-widget-content ui-corner-all my-text-field"></td>
+                </tr>
+                <tr>
+                  <td><label for="switch_form_param2">Param 2</label></td>
+                  <td><input type="number" name="switch_form_param2" id="switch_form_param2" value="" class="text ui-widget-content ui-corner-all my-text-field"></td>
+                </tr>
+              </table>
+              <hr>
+              <button id="switch_form_delete" class="settings_form_delete ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">Delete</span></button>
+              <button id="switch_form_disconnect" class="settings_form_disconnect ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Disconnect</span></button>
+              <button id="switch_form_save" class="settings_form_save ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Apply</span></button>
+            </div> -->
+            <div id="splitfunc_form" title="Function Splitter Properties" class="settings_form" style="display: none;">
+              <div id="splitfunc_form_close" type"button" class="settings_form_close">
+                <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+              </div>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+
+              <table>
+                   <tr><td><div class="onoffswitch">
+                      <input type="checkbox" name="splitswitch" class="onoffswitch-checkbox" id="splitswitch" onclick="checkSplitSwitch()">
+                      <label class="onoffswitch-label" for="splitswitch">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label></div></td><td><font size="3">Use UDO</font></td>
+                   </tr>
+                </table>    
+              <br/>
+              <div id="splitfunc_UDO_field" style="display : none">
+                <label for="splitfunc_form_funct" style="font-size: 14px;font-weight: normal;" >Choose UDO field</label><br/>
+                <select name="splitfunc_dropdown_0" id="splitfunc_dropdown_0" class="form-control text ui-widget-content ui-corner-all"><br/>
+                </select>
+              </div>
+                  <br/>
+ 
+                <div id="splitfunc_USE_UDO" style="display:none">
+                  <label for="splitfunc_form_funct" style="font-size: 14px;font-weight: normal;">Function to determine what traffic goes to the top channel</label><br/>
+                  <table>
+                    <tr>
+                      <td width="50%"><select name="splitfunc_dropdown_1" id="splitfunc_dropdown_1" class="form-control text ui-widget-content ui-corner-all">
+                        <option value=">">></option>
+                        <option value=">=">>=</option>
+                        <option value="<"><</option>
+                        <option value="<="><=</option>
+                        <option value="==">&#61;&#61;</option>
+                        <option value="!=">!=</option>
+                      </select></td>
+                      <td><input type="text" name="splitfunc_form_param1" id="splitfunc_form_param1" class="form-control text ui-widgetet-content ui-corner-all my-text-field"></td>
+                    </tr>
+                  </table>
+                </div>
+
+
+               <div class="form-group" id="splitfunc_NO_UDO" >
+                <label for="splitter_form_perc" style="font-size: 14px;font-weight: normal;">Fraction of traffic that goes to the top channel</label><br/>
+                <input type="number" name="splitfunc_prob" id="splitfunc_prob" class="form-control" min="0" max="1" step=".1">
+              </div>
+              
+              <br/>
+              <div id="splitfunc_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+              </div>
+              <div id="splitfunc_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+              </div>
+              <div id="splitfunc_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+              </div>
+            </div>
+            <!--   <div id="splitfunc_form" title="Function Splitter Properties" class="settings_form" style="display: none; position: absolute;">
+              <button id="splitfunc_form_close" class="settings_form_close ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" title=""><span class="ui-button-icon-primary ui-icon ui-icon-close"></span><span class="ui-button-text"></span></button></br>
+              <table>
+                <tr>
+                  <td><label for="splitfunc_form_funct">Choose UDO field</label></td>
+                  <td><select name="splitfunc_dropdown_0" id="splitfunc_dropdown_0" class="text ui-widget-content ui-corner-all">
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="splitfunc_form_funct">Function to determine what traffic goes to the top channel</label></td>
+                <td><select name="splitfunc_dropdown_1" id="splitfunc_dropdown_1" class="text ui-widget-content ui-corner-all">
+                  <option value=">">></option>
+                  <option value=">=">>=</option>
+                  <option value="<"><</option>
+                  <option value="<="><=</option>
+                  <option value="==">equals</option>
+                  <option value="!=">!=</option>
+                </select>
+              </td>
+              <td><input type="number" name="splitfunc_form_param1" id="splitfunc_form_param1" value="" class="text ui-widget-content ui-corner-all my-text-field"></td>
+            </tr>
+          </table>
+          <hr>
+          <button id="splitfunc_form_delete" class="settings_form_delete ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">Delete</span></button>
+          <button id="splitfunc_form_disconnect" class="settings_form_disconnect ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Disconnect</span></button>
+          <button id="splitfunc_form_save" class="settings_form_save ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Apply</span></button>
+        </div> -->
+        <div id="funcblock_form" title="Function Block Properties" class="settings_form" style="display: none;">
+          <div id="funcblock_form_close" type"button" class="settings_form_close">
+            <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 22px; top: 10px" aria-hidden="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="fun_cblock_name" style="font-size: 14px;font-weight: normal;">Name</label><br/>
+            <input type="text" class="form-control" id="func_block_name" placeholder="Enter name">
+          </div>
+          <div>
+            <label for="funcblock_form_funct" style="font-size: 14px;font-weight: normal;">Choose UDO field</label><br/>
+          <select name="funcblock_dropdown_0" id="funcblock_dropdown_0" onChange="funcBlockDropdownSwitch()"class="form-control text ui-widget-content ui-corner-all"></select>
+          <label for="funcblock_form_funct" style="font-size: 14px;font-weight: normal;">Function to determine what traffic goes to the top channel</label>
+          <table>
+            <tr>
+              <td><select name="funcblock_dropdown_1" id="funcblock_dropdown_1" class="form-control text ui-widget-content ui-corner-all ">
+                <option id="addition"value="+">+</option><!-- int, float -->
+                <option id="subtraction"value="-">-</option><!-- int, float -->
+                <option id="multiplication"value="*">x</option><!-- int float -->
+                <option id="division" value="/">/</option><!-- int, float (do we care about zero)-->
+                <option id="modulus" value="%">%</option><!-- int -->
+                <option id="not" value="!">!</option><!-- boolean -->
+                <option id="equals" value="=">&#61;</option> <!-- int,float -->
+              </select></td>
+              <td><input type="text" name="funcblock_form_param1" id="funcblock_form_param1" value="" class="form-control text ui-widget-content ui-corner-all my-text-field"></td>
+            </table>
+          </div>
+          <hr>
+          <div id="funcblock_form_disconnect" type="button" class="settings_form_disconnect btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Detach
+          </div>
+          <div id="funcblock_form_save" type="button" class="settings_form_save btn btn-success btn-xs">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Apply
+          </div>
+          <div id="funcblock_form_delete" type="button" class="settings_form_delete btn btn-danger btn-xs">
+            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+          </div>
+        </div>
+        <div id="hover_form" class="settings_form" style="display: none; position: absolute; font-size: 6px; width: 250px;">
+          <div id="hover_form_to_append">
+            <table id="hover_table" class="table table-bordered" style="margin-bottom: 0px"></table>
+          </div>
+        </div>
+        <div id="udo_form" class="udo_form" style="display: none; position: absolute;">
+          <div id="udo_form_close" class="settings_form_close" role="button" title="">
+            <span class="glyphicon glyphicon-remove-circle" style="float: right; positon: absolute; left: 1px; top: -2px">
+            </div>
+            <div id="udo_form_to_append">
+              <table id="udo_dialogue_table">
+                <!--  <tr id="udo_row_0" style="display: none; font-size: 14px; font-weight: normal;">
+                  <td> <input id="udo_text_box_0" type="text" value="field 0" class="text ui-widget-content ui-corner-all my-text-field" /></td>
+                  <td><select name="sources_dropdown" class = "ui-widget-content ui-corner-all" id="udo_dropdown_0" class="text ui-widget-content ui-corner-all">
+                    <option  value="INT">INT</option>
+                    <option  value="FLOAT">FLOAT</option>
+                    <option  value="BOOLEAN">BOOLEAN</option>
+                  </select>
+                </td>
+                <div type="button" class="udo_button_close ui-button btn btn-danger btn-xs" onclick = "removeUdoTableRow(0)">
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+                </div>
+              </td>
+            </tr>-->
+          </table>
+        </div>
+        <div id="udo_save_btns_div">
+          <div id="btnAdd" type="button" class="btn btn-success btn-xs" onclick="udoman.addField()">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+          </div>
+          <div id="btnApply" type="button" class="btn btn-primary btn-xs" onclick="udoman.saveUDO()">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Apply
+          </div>
+        </div>
+      </div>
+      <!--Textboxes will be added here -->
+      <!--  <tr id="udo_row_1" style="display: none; font-size: 14px; font-weight: normal;">
+        <td> <input id="udo_text_box_1" type="text" value = "field 1" class="text ui-widget-content ui-corner-all my-text-field" /></td>
+        <td><select name="sources_dropdown" class = "ui-widget-content ui-corner-all" id="udo_dropdown_1" class="text ui-widget-content ui-corner-all">
+          <option  value="INT">INT</option>
+          <option  value="FLOAT">FLOAT</option>
+          <option  value="BOOLEAN">BOOLEAN</option>
+        </select>
+      </td>
+      <td>
+        <div type="button" class="udo_button_close ui-button btn btn-danger btn-xs" onclick = "removeUdoTableRow(1)">
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+        </div>
+      </td>
+    </tr>
+    <tr id="udo_row_2" style="display: none; font-size: 14px; font-weight: normal;">
+      <td> <input id="udo_text_box_2" type="text" value = "field 2" class="text ui-widget-content ui-corner-all my-text-field" /></td>
+      <td><select name="sources_dropdown" class = "ui-widget-content ui-corner-all" id="udo_dropdown_2" class="text ui-widget-content ui-corner-all">
+        <option  value="INT">INT</option>
+        <option  value="FLOAT">FLOAT</option>
+        <option  value="BOOLEAN">BOOLEAN</option>
+      </select></td>
+      <td>
+        <div type="button" class="udo_button_close ui-button btn btn-danger btn-xs" onclick = "removeUdoTableRow(2)">
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+        </div>
+      </td>
+      <br />
+    </tr>
+    <tr id="udo_row_3" style="display: none; font-size: 14px; font-weight: normal;">
+      <td> <input id="udo_text_box_3" type="text" value = "field 3" class="text ui-widget-content ui-corner-all my-text-field" /></td>
+      <td><select name="sources_dropdown" class = "ui-widget-content ui-corner-all" id="udo_dropdown_3" class="text ui-widget-content ui-corner-all">
+        <option  value="INT">INT</option>
+        <option  value="FLOAT">FLOAT</option>
+        <option  value="BOOLEAN">BOOLEAN</option>
+      </select></td>
+      <td>
+        <div type="button" class="udo_button_close ui-button btn btn-danger btn-xs" onclick = "removeUdoTableRow(3)">
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+        </div>
+      </td>
+    </tr>
+    <tr id="udo_row_4" style="display: none; font-size: 14px; font-weight: normal;">
+      <td> <input id="udo_text_box_4" type="text" value = "field 4" class="text ui-widget-content ui-corner-all my-text-field"/></td>
+      <td><select name="sources_dropdown" class = "ui-widget-content ui-corner-all" id="udo_dropdown_4" class="text ui-widget-content ui-corner-all">
+        <option  value="INT">INT</option>
+        <option  value="FLOAT">FLOAT</option>
+        <option  value="BOOLEAN">BOOLEAN</option>
+      </select></td>
+      <td>
+        <div type="button" class="udo_button_close ui-button btn btn-danger btn-xs" onclick = "removeUdoTableRow(4)">
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete
+        </div>
+      </td>
+    </tr>
+  </table>-->
+</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="graph/lineGraph.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(function(){
+  var ttext;
+  $('img').hover(function(){
+    ttext = $(this).attr('title');
+    $(this).removeAttr('title');
+  },
+  function(){
+    $(this).attr('title', ttext);
+  });
+});
+</script>
+</body>
+</html>

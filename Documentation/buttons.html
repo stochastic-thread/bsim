@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="gettingStarted.html">Getting Started</a></li>
+            <li ><a href="running.html">Running the Simulation</a></li>
+            <li ><a href="output.html">Getting the Output</a></li>
+            <li ><a href="advanced.html">Advanced Functionality</a></li>
+            <li ><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li ><a href="udos.html">Entities</a></li>
+          	<li class="active"><a href="buttons.html">Buttons</a></li>
+          	<li><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+        <h2>Buttons</h2>
+		
+			<p> Click on any of the buttons above to learn more about what that button does.</p>
+		<br/>
+		<button id="clear_screen" type="button" class="btn btn-default btn-sm" >
+                <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Clear
+                </button>
+                <div id="import_file" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import
+                </div>
+                <div id="export_file" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Export
+                </div>
+                <div id="download_json" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Download JSON
+                </div>
+                <div id="download_data" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download Data
+                </div>
+				<div id="graph_data" type="button" class="btn btn-default btn-sm" onclick='setSimulationResults()'>
+                  <span class="glyphicon glyphicon-signal" aria-hidden="true"></span><span style="margin-left: 0.5em;">Graph Data</span>
+                </div>
+                <div id="use_udo" type="button" class="btn btn-default btn-sm" onclick='udoman.toggleUseUDO()'>
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span><span style="margin-left: 0.5em;">Not Using UDO</span>
+                </div>
+                <div id="add_udo" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add UDO
+                </div>
+                <div id="config_sim" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                  <span id="config_label" class="ui-button-text">8:00 hours</span>
+                </div>
+                <div id="play_sim" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Simulate
+                </div>
+			<div class="collapse" id="clear">
+				<section>
+					<div class="page-header">
+						<h1>Clear</h1>
+					</div>
+					<h4> Clear resets the simulation. This button removes all entities from the simulation and clears the simulation data.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="import">
+				<section>
+					<div class="page-header">
+						<h1>Import</h1>
+					</div>
+					<h4> Import allows you to input a previously saved simulation as a JSON text file.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="export">
+				<section>
+					<div class="page-header">
+						<h1>Export</h1>
+					</div>
+					<h4> Brings up the JSON text file associated with the simulation to allow you to copy the simulation to your clipboard..</h4>
+				</section>
+			</div>
+			<div class="collapse" id="downloadJSON">
+				<section>
+					<div class="page-header">
+						<h1>Download JSON</h1>
+					</div>
+					<h4> Downloads the JSON file that is a saved text representation of the simulation.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="downloadData">
+				<section>
+					<div class="page-header">
+						<h1>Download Data</h1>
+					</div>
+					<h4> Downloads the raw text file associated with the current simulation's output.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="graphData">
+				<section>
+					<div class="page-header">
+						<h1>Graph Data</h1>
+					</div>
+					<h4> Returns a graphical representation of the simulation's output data.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="NotUsingUDO">
+				<section>
+					<div class="page-header">
+						<h1>Not Using UDO</h1>
+					</div>
+					<h4> A toggle-able button which lets the canvas know whether you are using custom UDOs or not.</h4> <br/>
+					<h5> Clicking the button will change it to </h5>
+					<div id="use_udo" type="button" class="btn btn-default btn-sm" onclick='udoman.toggleUseUDO()'>
+                  <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span><span style="margin-left: 0.5em;">Using UDO</span>
+                </div>
+				</section>
+			</div>
+			<div class="collapse" id="addUDO">
+				<section>
+					<div class="page-header">
+						<h1>Add UDO</h1>
+					</div>
+					<h4> Adds new UDOs to the canvas. Also allows you to modify and/or delete existing UDOs. Click "Apply" to save changes to the canvas.</h4>
+				</section>
+			</div>
+			<div class="collapse" id="time">
+				<section>
+					<div class="page-header">
+						<h1>8:00 Hours<h1>
+					</div>
+					<h4> Determines how long the simulation will run for. Users may modify the length of time, the random seed, and the maximum entity records.
+						<br/> <br/>Changing the length of time will modify the name of the button.
+					</h4>
+				</section>
+			</div>
+			<div class="collapse" id="simulate">
+				<section>
+					<div class="page-header">
+						<h1>Simulate</h1>
+					</div>
+					<h4> Runs the simulation!</h4>
+				</section>
+			</div>
+      </div>
+		
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
+	<script>
+$(document).ready(function(){
+    $("#clear_screen").click(function(){
+		$("#clear").collapse('show');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	$("#import_file").click(function() {
+		$("#clear").collapse('hide');
+        $("#import").collapse('show');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+    $("#export_file").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('show');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+    $("#download_json").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('show');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	$("#download_data").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('show');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	
+	$("#graph_data").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('show');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	
+	$("#use_udo").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('show');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	
+	$("#add_udo").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('show');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('hide');
+    });
+	$("#config_sim").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('show');
+		$("#simulate").collapse('hide');
+    });
+	$("#play_sim").click(function(){
+        $("#clear").collapse('hide');
+        $("#import").collapse('hide');
+		$("#export").collapse('hide');
+		$("#downloadJSON").collapse('hide');
+        $("#downloadData").collapse('hide');
+		$("#graphData").collapse('hide');
+		$("#NotUsingUDO").collapse('hide');
+        $("#addUDO").collapse('hide');
+		$("#time").collapse('hide');
+		$("#simulate").collapse('show');
+    });
+});
+</script>
+  </body>
+</html>

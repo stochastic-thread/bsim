@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="gettingStarted.html">Getting Started</a></li>
+            <li class="active"><a href="running.html">Running the Simulation</a></li>
+            <li><a href="output.html">Getting the Output</a></li>
+            <li><a href="advanced.html">Advanced Functionality</a></li>
+            <li><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li><a href="udos.html">Entities</a></li>
+          	<li><a href="buttons.html">Buttons</a></li>
+          	<li><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+	   <section id="linkingEntities">
+			<div class="page-header">
+				<h2>Configuring the Simulation</h2>
+			</div>
+				<span class="null" style="text-align:left;">When you're happy with the layout of your <a href="udos.html">entities</a>, you can configure the parameters of your simulation.<br/> Click the configuration button on the top right with the <span class="glyphicon glyphicon-time" aria-hidden="true"></span> icon, which defaults to the following:<br/><br/></span>
+			<div type="button" class="btn btn-default btn-sm">
+				<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+				<span class="ui-button-text">8:00 hours</span>
+			</div>
+			<p> <br/>
+				Here, you can configure the amount of time to simulate, manually set a seed for the simulation, and cap the number of entity records that can be generated.
+				<br/> When finished configuring the simulation, click the following to save your changes: <span><div id="btnApply" type="button" class="btn btn-xs btn-green" style="background-color: hsl(112, 100%, 32%) !important; color:white; border-color:white;" onclick="udoman.saveUDO()">
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Apply
+      </div></span>
+			</p>
+			
+		</section>
+		<section id="linkingEntities">
+			<div class="page-header">
+				<h2>Running the Simulation</h2>
+			</div>
+			<p>
+				If you're ready to run your simulation, simply hit the Simulate button! <br/>
+			</p>
+			<div id="play_sim" type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Simulate
+            </div>
+			<br/>
+			<br/>
+				The Simulation will now be executing your input. To see how to pull results from your simulation, check out <a href="output.html">Getting the Output</a>!
+			</p>
+			
+		</section>
+      </div>
+		
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

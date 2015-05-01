@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="gettingStarted.html">Getting Started</a></li>
+            <li><a href="running.html">Running the Simulation</a></li>
+            <li><a href="output.html">Getting the Output</a></li>
+            <li><a href="advanced.html">Advanced Functionality</a></li>
+            <li><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li><a href="udos.html">Entities</a></li>
+          	<li><a href="buttons.html">Buttons</a></li>
+          	<li class="active"><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+       	<div class="page-header" style="text-align:left;">
+       		
+  			<h1>Glossary <small></small></h1>
+		</div>
+		<div class="col-md-3" style="text-align:left;">	
+			<div class="row">
+      			<div class="span3 bs-docs-sidebar">
+        			<ul class="nav nav-list bs-docs-sidenav">
+          				<li><a href="#distribution"><i class="icon-chevron-right"></i> Distribution</a></li>
+          				<li><a href="#histogram"><i class="icon-chevron-right"></i> Histogram</a></li>
+          				<li><a href="#overflow"><i class="icon-chevron-right"></i> Overflow</a></li>
+          				<li><a href="#udosDefinition"><i class="icon-chevron-right"></i> UDOs</a></li>
+          				<li><a href="#valid"><i class="icon-chevron-right"></i> Valid</a></li>
+       				 </ul>
+      			</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<section id="distribution">
+				<div class="page-header">
+					<h3 style="text-align:left;">Distribution</h3>
+				</div>
+				<h4 style="text-align:left;">Definition</h4>
+        		<p style="text-align:left;"> Determines the type of distribution for data in the simulation.</p>
+        		<h4 style="text-align:left;">Options</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				Random Distribution: An entirely unpredictable distribution of the data, where each variable is a <a href="http://en.wikipedia.org/wiki/Random_variable">random variable.</a>
+        			</li>
+        			<li>
+        				Uniform Distribution: Represents a distribution with a constant probability over an interval. <a href="http://en.wikipedia.org/wiki/Uniform_distribution_%28continuous%29">Learn more.</a>
+        			</li>
+        			<li>
+        				Gaussian Distribution: A bell-curve distribution used in situations where the distribution is unknown. <a href="http://en.wikipedia.org/wiki/Normal_distribution">Learn more.</a>
+        			</li>
+        			<li>
+        				Exponential Distribution: The probability of an event occuring over an interval is proportional to the length of the interval. <a href="http://en.wikipedia.org/wiki/Exponential_distribution">Learn more.</a>
+        			</li>
+        			<li>
+        				Pareto Distribution: A skewed, heavy-tailed distribution used to model distribution of incomes and other financial variables. <a href="http://en.wikipedia.org/wiki/Pareto_distribution">Learn more.</a>
+        			</li>
+        			<li>
+        				Gamma Distribution: A two-parameter family of continuous probability distributions. <a href="http://en.wikipedia.org/wiki/Gamma_distribution">Learn more.</a>
+        			</li>
+        			<li> 
+        				Weibull Distribution: A distribution that is usually used to determine the lifetime of a product before it fails. <a href="http://en.wikipedia.org/wiki/Weibull_distribution">Learn more.</a>
+        			</li>
+        		</ul>
+        	</section>
+			<section id="histogram">
+				<div class="page-header">
+					<h3 style="text-align:left;">Histogram</h3>
+				</div>
+				<h4 style="text-align:left;">Definition</h4>
+        		<p style="text-align:left;"> A histogram is a diagram consisting of triangles whose area is proportional to the frequency of a variable and whose width is equal to the class interval. <a href="http://en.wikipedia.org/wiki/Histogram">Learn more.</a></p>
+        		<h4 style="text-align:left;">Parameters</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				Bucket Width: Consecutive, non-overlapping intervals of a variable. <a href="http://en.wikipedia.org/wiki/Histogram#Number_of_bins_and_width">Learn more.</a>
+        			</li>
+        		</ul>
+				<h4 style="text-align:left;">Restrictions</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				In BLUESIM, a histogram may not display more than 30 buckets. If the simulation results in more than 30 buckets, the last column (30th bucket) will contain the sum of all buckets from the 30th bucket to the last bucket.
+        			</li>
+        		</ul>
+        	</section>
+        	<section id="overflow">
+				<div class="page-header">
+					<h3 style="text-align:left;">Overflow</h3>
+				</div>
+				<h4 style="text-align:left;">Definition</h4>
+        		<p style="text-align:left;"> Overflow occurs when excess data exists that is not able to accommodated by the allotted space within an entity. Data that is considered to be "overflow" is dropped from the simulation.</p>
+        	</section>
+        	<section id="udosDefinition">
+				<div class="page-header">
+					<h3 style="text-align:left;">UDOs</h3>
+				</div>
+				<h4 style="text-align:left;">Definition</h4>
+        		<p style="text-align:left;"> User defined objects. These objects may be added by clicking <button id="graph_data" type="button" class="btn btn-default btn-sm" style=" padding: 2px 2px;
+    font-size: 10px;
+    line-height: normal;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span style="margin-left: 0.5em;">Add UDO
+					</span>
+					</button> at the top of the canvas. <br/>UDOs are variables used to store and return data.</p>
+        	</section>
+        	<section id="valid">
+				<div class="page-header">
+					<h3 style="text-align:left;">Valid</h3>
+				</div>
+				<h4 style="text-align:left;">Definition</h4>
+        		<p style="text-align:left;"> A connection between two entities is "valid" if data may flow from entity to another.</p>
+        		<h4 style="text-align:left;">Restrictions</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				A source may not have any incoming data.
+        			</li>
+        			<li>
+        				A sink may not have any outgoing data.
+        			</li>
+        		</ul>
+        	</section>
+        </div>
+      </div>
+		
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

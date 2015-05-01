@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="active"><a href="gettingStarted.html">Getting Started</a></li>
+            <li><a href="running.html">Running the Simulation</a></li>
+            <li><a href="output.html">Getting the Output</a></li>
+            <li><a href="advanced.html">Advanced Functionality</a></li>
+            <li><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li><a href="udos.html">Entities</a></li>
+          	<li><a href="buttons.html">Buttons</a></li>
+          	<li><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+       <section id="gettingStarted">
+				<div class="page-header">
+					<h2>Getting Started</h2>
+				</div>
+        		<p> BLUESIM makes it incredibly easy to jump in and start developing your own simulations.
+        	<br /> <br />
+        	To start, let's review the tools available.
+        	<br />
+        	<br />
+        	<table class="table">
+        		<tr>
+        			<td>
+        				<img src="../images/source.png" alt="" width="64"/>
+        			</td>
+        			<td>
+        				<img src="../images/queue.png" alt="" width="64"/> 
+        			</td>
+        			<td>
+        				<img src="../images/func.png" alt="" width ="64"/>
+        			</td>
+                    <td>
+                        <img src="../images/sink.png" alt="" width="64"/>
+                    </td>
+        			<td>
+        				<img src="../images/splitfunc.png" alt="" width="64"/>
+        			</td>
+                    <td>
+                        <img src="../images/thermometer.png" alt="" width="64"/>
+                    </td>
+        			<td>
+        				<img src="../images/reverser.png" alt="" width="64"/>
+        			</td>
+                    <td>
+                        <img src="../images/cloner.png" alt="" width="64"/>
+                    </td>
+                    <td>
+                        <img src="../images/stack.png" alt="" width="64"/>
+                    </td>
+        		</tr>
+        		<tr>
+        			<td>
+        				Source
+        			</td>
+        			<td>
+        				Queue
+        			</td>
+        			<td>
+        				Function
+        			</td>
+                    <td>
+                        Sink
+                    </td>
+        			<td>
+        				Split Function
+        			</td>
+                    <td>
+                        Thermometer
+                    </td>
+        			<td>
+        				Reverser
+        			</td>
+                    <td>
+                        Cloner
+                    </td>
+                    <td>
+                        Stack
+                    </td>
+        		</tr><tr>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+        			<td>
+        			</td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+        		</tr>
+        	</table>
+        	You can find the full documentation for these tools, called entities, by clicking <a href="udos.html">here.</a>
+			<br />
+			You can find the full documentation for the buttons available above the canvas by clicking <a href="buttons.html">here.</a>
+			<br />
+			BLUESIM allows you to use as many or as little of these tools as you'd like in creating your simulations.
+			<br />
+			
+		</p>
+      </section>
+      <br/><br/><br/>
+      <section id="linkingEntities">
+				<div class="page-header">
+					<h2>A New Simulation</h2>
+				</div>  	
+				<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="source_1.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;">New Objects</h4>
+        				<p class = "media-left" style="text-align:left;">You can add an entity to your simulation by dragging and dropping it from the left-most menu onto your canvas.
+        				 <br/> 
+							If your simulation involves saving the state of variable(s), you may add <a href="definitions.html#udosDefinition">UDOs</a> to your simulation.<br/>
+        				 	Double click the entity to modify its fields. You can set a new name, add custom parameters, or any number of modifications (depending on the entity).
+        				 
+						 <br/>
+        				 	Click and hold the blue arrow to link an entity to any other <a href="definitions.html#valid">valid</a> entity in your simulation.
+        				</p>
+        			</div>
+        		</div><br/>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="linkedUDOs.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;">Linked Entities</h4>
+        				<p class = "media-left" style="text-align:left;">
+							When two entities are linked, a blue line represents the flow of data from one entity to the other!
+						</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="longChain.png" alt=""  height="80">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;">Infinite possibilities</h4>
+        				<p class = "media-left" style="text-align:left;">
+							Entities may be linked in any number of <a href="definitions.html#valid">valid</a> ways, in any location, in any order! <br/> Once your simulation is ready to run, take a look at <a href="running.html">Running the Simulation</a> to learn how to begin getting data from your simulation.</p>
+        			</div>
+        		</div>
+        		
+	</section>
+      </div>
+		
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

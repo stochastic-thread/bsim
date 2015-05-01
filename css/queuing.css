@@ -1,0 +1,234 @@
+/* controls font size for buttons */ 
+
+
+body {	
+	font-size:10px;
+	background-color: rgba(52,152,219, 0.86);
+}
+
+#examples {
+	font-size: 40px;
+	height: 10px;
+	background-color: white; 
+	width: 30em;
+}
+
+h1 {
+	color:#1c94c4;
+	margin-bottom:0
+}
+
+/*.btn-xlarge {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }*/
+
+/*.ui-buttonset {
+	height: 10px;
+}
+*/
+p#subtitle {
+	font-size:1.2em;
+	text-transform:uppercase;
+	color:#1c94c4
+}
+p.info {
+	margin-left:30px;
+	font-size:1.2em
+}
+
+/*#like_buttons {
+	position:absolute;
+	top:30px;
+	left:900px;
+	padding:4px;
+	border-bottom:solid 4px #f7b64a
+}*/
+/*
+#toolbar_div {
+	height: 10px;
+}*/
+
+#banner {
+	background-image:url('../images/banner.png');
+	padding:1px;
+	padding-left:30px;
+	border-radius:10px;
+	width:830px
+}
+
+#canvas {
+	padding-top:1%
+}
+#info {
+	border:4px solid #ffd478;
+	background:#faf6aa;
+	width:200px;
+	margin-bottom:50px;
+	position:absolute;
+	top:80px;
+	left:880px;
+	padding:5px;
+	font-size:1.1em
+}
+
+h1 {
+	font-color:red
+}
+
+
+
+#progressbar {
+	width:400px;
+	float:left
+}
+
+label {
+	font-size:.6em;
+	float:left
+}
+
+.stats {
+	display:inline-block;
+	border:1px solid #faf6aa;
+	padding:.4em;
+	margin:.4em;
+	background:#f7d68a
+}
+.stats_table {
+	border:1px;
+	font-size:1.2em;
+	border-collapse:collapse;
+	background-color:#faf6aa
+}
+#server_stats,#sink_stats {
+	display:none
+}
+#stack_stats,#sink_stats {
+	display:none
+}
+.udo_form {
+	padding:10px;
+	background-color:white;
+	width:270px;
+/*	-moz-box-shadow:5px 5px 5px #ccc;
+	-webkit-box-shadow:5px 5px 5px #ccc;
+	box-shadow:5px 5px 5px #ccc;*/
+
+}
+.settings_form {
+	padding:10px;
+	background-color:white;
+	width:220px;
+/*	-moz-box-shadow:5px 5px 5px #ccc;
+	-webkit-box-shadow:5px 5px 5px #ccc;
+	box-shadow:5px 5px 5px #ccc;*/
+}
+
+.my-text-field {
+	right:150px;
+	width:80px;
+}
+
+.my-text-field-large {
+	right:150px;
+	width:140px;
+}
+.settings_form_close {
+	position:absolute;
+	top:-6px;
+	left:170px;
+	width:20px;
+	height:20px
+}
+.inline {
+	display:inline
+}
+.shift-down {
+	margin-bottom:-5px
+}
+strong {
+	color:#1C1C1C;
+}
+#sample_models {
+	padding:5px
+}
+.about_text {
+	display:none
+}
+.navigation {
+	list-style-type:none;
+	padding-left:0;
+	margin-left:0;
+	height: 300px;
+	/*overflow: -moz-scrollbars-vertical;*/
+    overflow: scroll
+}
+.navigation a, li {
+	text-decoration:none;
+	display:block;
+	padding:2px;
+}
+
+.navigation a:hover {
+	background-color: #999999;
+	color:#fff;
+	font-weight:bold;
+	border-left:solid 5px #999999
+	border-bottom: 0px;
+	border-top: 0px;
+}
+.navigation a:link a:visited {
+	color: #fff;
+}
+
+ #accordion {
+    width:250px;
+    height:250px;
+    opacity: 1.0;
+    font-size: 12px;
+    /*filter: alpha(opacity=40);*/
+}
+
+#accordion:hover {
+	opacity: 1.0;
+    /*filter: alpha(opacity=100);*/
+}
+
+
+
+#udo_form_close {
+	position:absolute;
+	top: 5px;
+	left:245px;
+	width:20px;
+	height:20px
+}
+
+
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial
+}
+
+#btn {
+	font-family: "Helvetica Neue", Helvetica, Arial
+}
+
+.panel {
+    border: 0;
+}
+
+#color_key{
+	width:10%;
+	height:30%;
+}
+
+#blueSimLogo{ /* makes the logo header fixed in size and doesn't make it smaller than this size*/
+	min-height: 33px
+}
+
+

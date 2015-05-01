@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icon.png">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="gettingStarted.html">Getting Started</a></li>
+            <li ><a href="running.html">Running the Simulation</a></li>
+            <li ><a href="output.html">Getting the Output</a></li>
+            <li ><a href="advanced.html">Advanced Functionality</a></li>
+            <li ><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li class="active"><a href="udos.html">Entities</a></li>
+          	<li><a href="buttons.html">Buttons</a></li>
+          	<li><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+        <h1 >Entities</h1>
+
+        <div class="paragraphs">
+        	<div class="row">
+        			<div class="clearfix content-heading">
+        				<div role="tabpanel">
+        					<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#source" aria-controls="profile" role="tab" data-toggle="tab">Source</a></li>
+    <li role="presentation"><a href="#queue" aria-controls="messages" role="tab" data-toggle="tab">Queue</a></li>
+    <li role="presentation"><a href="#function" aria-controls="settings" role="tab" data-toggle="tab">Function</a></li>
+    <li role="presentation"><a href="#sink" aria-controls="settings" role="tab" data-toggle="tab">Sink </a></li>
+    <li role="presentation"><a href="#splitFunction" aria-controls="settings" role="tab" data-toggle="tab">Split Function</a></li>
+    <li role="presentation"><a href="#thermometer" aria-controls="settings" role="tab" data-toggle="tab">Thermometer</a></li>
+    <li role="presentation"><a href="#reverser" aria-controls="settings" role="tab" data-toggle="tab">Reverser</a></li>
+    <li role="presentation"><a href="#cloner" aria-controls="settings" role="tab" data-toggle="tab">Cloner</a></li>
+    <li role="presentation"><a href="#stack" aria-controls="settings" role="tab" data-toggle="tab">Stack</a></li>
+  </ul>
+   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home"><br/><br/><p> BLUESIM contains a number of entities available for simulations.</p>
+        
+        				<p> Click on the tabs above to learn more information about how each entity functions within a BLUESIM simulation.</p>
+    			</div>
+    			
+    <div role="tabpanel" class="tab-pane" id="source">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/source.png" alt=""/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A source is an entity that generates the data that flows through the simulation. This can either be static data or custom User Defined Objects if set by the user. Sources should be linked to other entities to initialize the flow of data in the simulation. </p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        				<li>
+        					<a href="definitions.html#distribution">Distribution</a>
+        				</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="queue">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/queue.png" alt="" width="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A queue is an entity that holds a set of data generated by the source that must exit in the same order they come in. Upon running the simulation, each queue will generate a set of downloadable data. The data displayed will be the average number of arrivals, number of drops, server utilization, time spent in queue, as well as the total number of customers in the system.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				<a href="definitions.html#distribution">Distribution</a>
+        			</li>
+        			<li>
+        				Maximum Queue Length: Maximum amount of data that a queue may hold before it <a href="definitions.html#overflow">overflows.</a>
+        			</li>
+        			<li>
+        				Number of Servers: The number of servers used in the queue. This is amount of data that can be processed concurrently.
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="splitFunction">
+    	<br/>
+    	<br/>
+    	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/splitfunc.png" alt="" width="128" height="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A split function is an entity that takes in data from a single path and outputs it to two possible paths depending on the specified fraction of traffic that flows to the top channel. For example, an input of 0.5 would send 50% of traffic to the top channel, resulting in an equal distribution of data sent to the top and bottom. If UDOs are being used, the UDO field can be specified and more advanced functions can be used to determine the fraction of traffic sent to each channel.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				Fraction of data sent to top channel, or custom function (if UDOs are used)
+        			</li>
+        		</ul>
+        	</div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="sink">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/sink.png" alt="" width="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A sink is an entity trough which data exits the simulation. Sinks cannot link to other entities as they represent the end point of data. After running the simulation, each sink will generate a set of downloadable data that represents the average number of arrivals, population, and average stay duration of data in the simulation. Sinks require no special parameters.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				None
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="function">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/func.png" alt="" width ="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A function block is an entity that applies an operation to a User Defined Object. When an object passes through a function, the specific operation is performed on it and the new data is passed along to the next connected entity in the simulation.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				UDO field being used</li>
+        			<li>
+        				Function to be applied (ex: a value of '+1' will add '1' to the object before passing it through the connection)
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="reverser">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/reverser.png" alt="" width="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A reverser is an entity that reverses the flow of data for the purpose of creating feedback loops. With a reverser, data can be redirected to pass through a previous entity again for additional filtering. For example, in a “DMV” simulation it may be determined that after waiting in a line, 70% of users can pass through while 30% need to re-do their paperwork. Those 30% are redirected through a reverser to the back of the queue to wait in line again. Reversers require no special parameters.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				None
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="thermometer">
+    	<br/>
+        <div class = "media">
+        	<div class = "media-left media-middle">
+        		<img class = "media-object" src="../images/thermometer.png" alt="" width="128"/>
+        	</div>
+        	<div class = "media-body">
+        		<h4 class="media-heading" style="text-align:left;">Definition</h4>
+        		<p class = "media-left" style="text-align:left;"> <br/>A thermometer is an entity that measures statistics about the data that passes through it. Thermometers do nothing to alter the data, and merely serve as a tool for measuring information about the traffic passing through a specific point. Thermometers display statistics about the average population and time spent in the simulation and require no special parameters.</p>
+        		<h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+        		<ul style="text-align:left;">
+        			<li>
+        				None
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="cloner">
+        <br/>
+        <div class = "media">
+            <div class = "media-left media-middle">
+                <img class = "media-object" src="../images/cloner.png" alt="" width="128"/>
+            </div>
+            <div class = "media-body">
+                <h4 class="media-heading" style="text-align:left;">Definition</h4>
+                <p class = "media-left" style="text-align:left;"> <br/>A cloner is an entity that clones the data that passes through it, and sends each clone on a different path. Cloners do nothing to alter the data, and merely serve as a tool to send the same traffic on two paths. Cloners require no special parameters.</p>
+                <h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+                <ul style="text-align:left;">
+                    <li>
+                        None
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="stack">
+        <br/>
+        <div class = "media">
+            <div class = "media-left media-middle">
+                <img class = "media-object" src="../images/stack.png" alt="" width="128"/>
+            </div>
+            <div class = "media-body">
+                <h4 class="media-heading" style="text-align:left;">Definition</h4>
+                <p class = "media-left" style="text-align:left;"> <br/>A stack is an entity that holds a set of data generated by the source that must exit in the opposite order they come in (first in, last out).</p>
+                <h4 class="media-heading" style="text-align:left;"><br/>Parameter(s)</h4>
+                <ul style="text-align:left;">
+                    <li>
+                        None
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+       </div>
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

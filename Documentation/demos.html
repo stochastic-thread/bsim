@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>BLUESIM User Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="input.html" style="font-size:18px;">BLUESIM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ><a href="about.html">About</a></li>
+        <li ><a href="install.html">Installation Guide</a></li>
+        <li class="dropdown">
+          <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="gettingStarted.html">Getting Started</a></li>
+            <li ><a href="running.html">Running the Simulation</a></li>
+            <li ><a href="output.html">Getting the Output</a></li>
+            <li ><a href="advanced.html">Advanced Functionality</a></li>
+            <li class="active"><a href="demos.html">Demo Simulations</a></li>
+            <!-- 
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+             -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li><a href="udos.html">Entities</a></li>
+          	<li><a href="buttons.html">Buttons</a></li>
+          	<li><a href="definitions.html">Definitions</a></li>
+          </ul>
+         </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">Canvas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+       <div class="starter-template">
+        <h1 >Demo Simulations</h1>
+
+        <div class="paragraphs">
+        	<div class="row">
+        			<div class="clearfix content-heading">
+        				<div role="tabpanel">
+        					<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#bankTeller" aria-controls="profile" role="tab" data-toggle="tab">Bank Teller</a></li>
+    <li role="presentation"><a href="#plus" aria-controls="messages" role="tab" data-toggle="tab">Plus One</a></li>
+    <li role="presentation"><a href="#feedback" aria-controls="settings" role="tab" data-toggle="tab">Feedback </a></li>
+    <li role="presentation"><a href="#sine" aria-controls="settings" role="tab" data-toggle="tab">Sine Wave</a></li>
+    <li role="presentation"><a href="#primiteRoots" aria-controls="settings" role="tab" data-toggle="tab">Primitive Roots</a></li>
+    <li role="presentation"><a href="#collegePathways" aria-controls="settings" role="tab" data-toggle="tab">College Pathways</a></li>
+    <li role="presentation"><a href="#predatorPrey" aria-controls="settings" role="tab" data-toggle="tab">Predator-Prey</a></li>
+  </ul>
+   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home"><br/><p> Packaged with BLUESIM are six example simulations. <br/> <br/>These demos are designed to introduce you to some of the basic functionality of BLUESIM and its possibilities. </p>
+        
+        				<p> You can find descriptions of these simulations by navigating the menu above. View them live by clicking "Example Models and Exercises" on the main BLUESIM canvas. </p>
+    			</div>
+    <div role="tabpanel" class="tab-pane" id="bankTeller">
+        <h2 id="bankTeller">Bank Teller</h2>
+        <img src="bankTeller.png" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Generating Customers</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, customers are generated at the source.</p>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="about.html">About</a></li>
+                        <li ><a href="install.html">Installation Guide</a></li>
+                        <li class="dropdown">
+                            <a href="#userGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Guide <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="gettingStarted.html">Getting Started</a></li>
+                                <li ><a href="running.html">Running the Simulation</a></li>
+                                <li ><a href="output.html">Getting the Output</a></li>
+                                <li ><a href="advanced.html">Advanced Functionality</a></li>
+                                <li class="active"><a href="demos.html">Demo Simulations</a></li>
+                                <!--
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                                -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#referenceGuide" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reference Guide <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="udos.html">Entities</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="definitions.html">Definitions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Canvas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                <h1 >Demo Simulations</h1>
+                <div class="paragraphs">
+                    <div class="row">
+                        <div class="clearfix content-heading">
+                            <div role="tabpanel">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                    <li role="presentation"><a href="#bankTeller" aria-controls="profile" role="tab" data-toggle="tab">Bank Teller</a></li>
+                                    <li role="presentation"><a href="#plus" aria-controls="messages" role="tab" data-toggle="tab">Plus One</a></li>
+<!--                                     <li role="presentation"><a href="#feedback" aria-controls="settings" role="tab" data-toggle="tab">Feedback </a></li>
+ -->                                    <li role="presentation"><a href="#sine" aria-controls="settings" role="tab" data-toggle="tab">Sine Wave</a></li>
+<!--                                     <li role="presentation"><a href="#collegePathways" aria-controls="settings" role="tab" data-toggle="tab">College Pathways</a></li>
+                                    <li role="presentation"><a href="#predatorPrey" aria-controls="settings" role="tab" data-toggle="tab">Predator-Prey</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home"><br/><p> Packaged with BLUESIM are six example simulations. <br/> <br/>These demos are designed to introduce you to some of the basic functionality of BLUESIM and its possibilities. </p>
+                                
+                                <p> You can find descriptions of these simulations by navigating the menu above. View them live by clicking "Example Models and Exercises" on the main BLUESIM canvas. </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="bankTeller">
+                                <h2 id="bankTeller">Bank Teller</h2>
+                                <img src="bankTeller.png" class="center-block img-responsive" alt="">
+                                <div class="col-md-7">
+                                    <h3 style="text-align:left;">Walkthrough:</h3>
+                                    <div class="panel-group" id="accordion" style="text-align:left;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Generating Customers</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <p>Once the simulation starts, customers are generated at the source.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Queueing Up</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Customers enter the queue FIFO (First In, First Out). The queue determines how long each customer needs to wait before they are servered by one of the five tellers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Leaving the Queue</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Once a customer has time to be "served" by a teller, they leave the queue and "leave" the simulation through the sink.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. Pulling Results</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Once the simulation completes, the sink outputs the simulation's data.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 style="text-align:left;">Entities used:</h3>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                                            <p class = "media-left" style="text-align:left;">The source for the bank teller demo is a group of customers with an exponential distribution function and a paramter of 5.</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/queue.png" alt="" height="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Queue</h4>
+                                            <p class = "media-left" style="text-align:left;">The queue represents the tellers. It is set to have a Gaussian distribution with parameters 5 and 1. The max queue length is set to 10 with 5 servers active.</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                                            <p class = "media-left" style="text-align:left;">The sink accepts all customers who have left the queue. In this simulation, it represents the customers that have been served by a teller.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="plus">
+                                <h2 id="bankTeller">Plus One</h2>
+                                <img src="plusOne.png" class="center-block img-responsive" alt="">
+                                <div class="col-md-7">
+                                    <h3 style="text-align:left;">Walkthrough:</h3>
+                                    <div class="panel-group" id="accordion2" style="text-align:left;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">1. Generating Integers</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne2" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <p>Once the simulation starts, integers are generated at the source.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">2. Adding One</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Each generated integer is passed to the source and has the function "+1" applied to it.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">3. Collecting Results</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Once the simulation completes, the sink outputs the simulation's data.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h3 style="text-align:left;">Entities used:</h3>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                                            <p class = "media-left" style="text-align:left;">The source creates data (integers) that are passed to the function. </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+                                            <p class = "media-left" style="text-align:left;">The function is a simple +1 additional to the data from the source.</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class = "media-left media-middle">
+                                            <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                        </div>
+                                        <div class = "media-body">
+                                            <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                                            <p class = "media-left" style="text-align:left;">The sink accepts all data points that have had +1 applied to them.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="sine">
+                                <h2 id="sine_wave">Sine Wave</h2>
+                                <img src="sinewave.png" class="center-block img-responsive" alt="">
+                                <div class="col-md-7">
+                                    <h3 style="text-align:left;">Walkthrough:</h3>
+                                    <div class="panel-group" id="accordion4" style="text-align:left;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour1">1. Generating Integers</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour1" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <p>Once the simulation starts, we generate a float x once which will loop for the remainder of the simulation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour2">2. Cloning</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>The x value is cloned so that we can transform it into sine data and still continue the feedback loop</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour3">3. Choosing to split</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour3" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>We want to generate 100 points so we check if x < 100. If it is then we continue the loop</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">4. Transformations</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour4" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>Past the cloner two things happen. One x value gets passed into our sine function and then goes to sink to be measured. The other x value gets incremented by 1 after is clears the func splitter so that we expand our domain.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour5">5. Graphing</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour5" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>We want to graph x at the thermometer <em>measure</em> and at the sink <em>function</em> and throw them into a line graph. You will see our x values increase linearly over time and you should see a sine function appear as well!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h3 style="text-align:left;">Entities used:</h3>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                                                    <p class = "media-left" style="text-align:left;">The source creates 1 float to be passed to the function. </p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+                                                    <p class = "media-left" style="text-align:left;">Since entities cannot connect back to themselves, a reverser is necessary to allow a path from the function block to the thermometer.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+                                                    <p class = "media-left" style="text-align:left;">Measures our domain over time (should go 1 to 100)</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+                                                    <p class = "media-left" style="text-align:left;">We do a simple increment on x using native functions and we use our advanced feature with the <code>eval()</code> statement to allow for the <code>Math.sin()</code> call.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+                                                    <p class = "media-left" style="text-align:left;">This entity evaluates incoming x values to make sure that it is less than 100 that way we have a terminate condition in our feedback loop.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                                                    <p class = "media-left" style="text-align:left;">The sinks act as terminal points and points for measuring the since wave.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Cloner</h4>
+                                                    <p class = "media-left" style="text-align:left;">The cloner copies our x values so that one becomes our sine point and one continues the loop.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="feedback">
+                                        <h2 id="bankTeller">Feedback Loop </h2>
+                                        <img src="feedbackLoop.png" class="center-block img-responsive" alt="">
+                                        <div class="col-md-7">
+                                            <h3 style="text-align:left;">Walkthrough:</h3>
+                                            <div class="panel-group" id="accordion4" style="text-align:left;">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour1">1. Generating Integers</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour1" class="panel-collapse collapse in">
+                                                        <div class="panel-body">
+                                                            <p>Once the simulation starts, integers are generated at the source.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour2">2. Measuring data</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour2" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>As the first step in the loop, integers are measured at their current values. During the first pass, this integer is measured at a value of 0.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour3">3. Choosing to split</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour3" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>At the spilt function, the integer is evaluated. If it is <5, it is sent to the top channel towards the function. Otherwise, it is sent to the bottom channel towards the sink. During the first pass, since 0 is less than 5, it is sent to the top channel.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">4. Adding One</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour4" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>Values passed to the top channel pass through the function block which increments the value of the integer by one.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour5">5. Clarifying the simulation paths</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour5" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>The integer is passed through a reverser which helps with visual clarity. The reverser does not change the value, but paths are easier to see.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour6">6. Looping</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour6" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>At this point, the integer begins the loop starting with Step 2. The integer is measured, sent to the split function, incremented by 1, and repeated while the integer has a value less than 5.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour7">7. Exiting the Loop</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour7" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>We will reach a point in the function where the integer contains a value of 5. When it reaches the split function, it no longer gets passed to the top channel and is instead sent to the sink. Once the sink receives the value, the simulation is complete.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h3 style="text-align:left;">Entities used:</h3>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                                                    <p class = "media-left" style="text-align:left;">The source creates data (integers) that are passed to the function. </p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+                                                    <p class = "media-left" style="text-align:left;">Since entities cannot connect back to themselves, a reverser is necessary to allow a path from the function block to the thermometer.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+                                                    <p class = "media-left" style="text-align:left;">Measures the value of the integers passed in from the reverser</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+                                                    <p class = "media-left" style="text-align:left;">The function is a simple +1 additional to the data from the source.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+                                                    <p class = "media-left" style="text-align:left;">This entity evaluates incoming integers. If the integer is <5, it is sent to the top channel.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                                                    <p class = "media-left" style="text-align:left;">The sink accepts all data points that have a value >= 5.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="collegePathways">
+                                    <h2 id="TODO">TODO PLOX</h2></div>
+                                    <div role="tabpanel" class="tab-pane" id="predatorPrey">
+                                        <h2 id="bankTeller">Predator-Prey</h2>
+                                        <img src="PredatorPrey2.png" class="center-block img-responsive" alt="">
+                                        <h3 id="bankTeller">Predator-Prey Graph</h2>
+                                        <img src="PredatorPrey2Graph.png" class="center-block img-responsive" alt="">
+                                        <div class="col-md-7">
+                                            <h3 style="text-align:left;">Walkthrough:</h3>
+                                            <div class="panel-group" id="accordion6" style="text-align:left;">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix1">1. Creating the populations</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix1" class="panel-collapse collapse in">
+                                                        <div class="panel-body">
+                                                            <p>Once the simulation starts, the number of rabbits, number of foxes, and max generation count is randomly generated.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix2">2. Entering the Queue</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix2" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p> For performance reasons, the population enters a queue to start the loop.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix3">3. Adjusting the population ratio</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix3" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p> The populations are adjusted! More prey means more predators, but more predators means less prey! The function blocks adjust the ratio and increments the generation count.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix4">4. Are we done?</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix4" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>At this stage, the current generation count is compared to the max generation count. If the current count is less than the max, the data is sent to the thermometer. Otherwise, it is sent to the sink.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix5">5. Measuring the data</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix5" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p> The thermometer measures the ratio at the current iteration of the loop! This lets us view the growth and fall of populations over time.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix6">6. Looping</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix6" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>At this point, the integer begins the loop starting with Step 2. Populations enter the queue, have their values adjusted, are measured, and repeat until the current generation count equals the max generation account.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix7">7. Exiting the Loop</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseSix7" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>Once the current generation count equals the maximum generation count, the simulation is done!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h3 style="text-align:left;">Entities used:</h3>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                                                    <p class = "media-left" style="text-align:left;">The source represents the initial population of the predators and prey. It loads three UDOs: NumRabbits, NumFoxes, and MaxGenerations.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+                                                    <p class = "media-left" style="text-align:left;">The reverser helps the simulation to have visual clarity.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+                                                    <p class = "media-left" style="text-align:left;">The thermometer measures the current population ratio of the predator/prey.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+                                                    <p class = "media-left" style="text-align:left;">The two function blocks raise and lower the populations. If the number of rabbits is greater than the number of foxes, then the rabbit population is decreased and the fox population is increased. Otherwise, the inverse occurs. Each time the data passes through the function blocks, the current generation count is incremented.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+                                                    <p class = "media-left" style="text-align:left;">This entity evaluates the incoming UDOs. If the current generation number is greater than or equal to the MaxGeneration, then it sends the UDOs to the sink. Otherwise, they loop again.</p>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class = "media-left media-middle">
+                                                    <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                                                </div>
+                                                <div class = "media-body">
+                                                    <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                                                    <p class = "media-left" style="text-align:left;">The sink accepts the final population output.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div><!-- /.container -->
+            
+            
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source for the bank teller demo is a group of customers with an exponential distribution function and a paramter of 5.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/queue.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Queue</h4>
+        				<p class = "media-left" style="text-align:left;">The queue represents the tellers. It is set to have a Gaussian distribution with parameters 5 and 1. The max queue length is set to 10 with 5 servers active.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sink accepts all customers who have left the queue. In this simulation, it represents the customers that have been served by a teller.</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    <div role="tabpanel" class="tab-pane" id="plus">
+        <h2 id="plusOne">Plus One</h2>
+        <img src="plusOne.png" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion2" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">1. Generating Integers</a>
+                </h4>
+            </div>
+            <div id="collapseOne2" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, integers are generated at the source.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">2. Adding One</a>
+                </h4>
+            </div>
+            <div id="collapseTwo2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Each generated integer is passed to the source and has the function "+1" applied to it.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">3. Collecting Results</a>
+                </h4>
+            </div>
+            <div id="collapseThree2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Once the simulation completes, the sink outputs the simulation's data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source creates data (integers) that are passed to the function. </p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+        				<p class = "media-left" style="text-align:left;">The function is a simple +1 additional to the data from the source.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sink accepts all data points that have had +1 applied to them.</p>
+        			</div>
+        		</div>
+        	</div>
+		</div>
+    <div role="tabpanel" class="tab-pane" id="feedback">
+	<h2 id="bankTeller">Feedback Loop </h2>
+        <img src="feedbackLoop.png" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion4" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour1">1. Generating Integers</a>
+                </h4>
+            </div>
+            <div id="collapseFour1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, integers are generated at the source.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour2">2. Measuring data</a>
+                </h4>
+            </div>
+            <div id="collapseFour2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>As the first step in the loop, integers are measured at their current values. During the first pass, this integer is measured at a value of 0.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour3">3. Choosing to split</a>
+                </h4>
+            </div>
+            <div id="collapseFour3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>At the spilt function, the integer is evaluated. If it is <5, it is sent to the top channel towards the function. Otherwise, it is sent to the bottom channel towards the sink. During the first pass, since 0 is less than 5, it is sent to the top channel.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">4. Adding One</a>
+                </h4>
+            </div>
+            <div id="collapseFour4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Values passed to the top channel pass through the function block which increments the value of the integer by one.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour5">5. Clarifying the simulation paths</a>
+                </h4>
+            </div>
+            <div id="collapseFour5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>The integer is passed through a reverser which helps with visual clarity. The reverser does not change the value, but paths are easier to see.</p>
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour6">6. Looping</a>
+                </h4>
+            </div>
+            <div id="collapseFour6" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>At this point, the integer begins the loop starting with Step 2. The integer is measured, sent to the split function, incremented by 1, and repeated while the integer has a value less than 5.</p>
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour7">7. Exiting the Loop</a>
+                </h4>
+            </div>
+            <div id="collapseFour7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>We will reach a point in the function where the integer contains a value of 5. When it reaches the split function, it no longer gets passed to the top channel and is instead sent to the sink. Once the sink receives the value, the simulation is complete.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source creates data (integers) that are passed to the function. </p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+        				<p class = "media-left" style="text-align:left;">Since entities cannot connect back to themselves, a reverser is necessary to allow a path from the function block to the thermometer.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+        				<p class = "media-left" style="text-align:left;">Measures the value of the integers passed in from the reverser</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+        				<p class = "media-left" style="text-align:left;">The function is a simple +1 additional to the data from the source.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+        				<p class = "media-left" style="text-align:left;">This entity evaluates incoming integers. If the integer is less than 5, it is sent to the top channel.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sink accepts all data points that have a value >= 5.</p>
+        			</div>
+        		</div>
+        	</div>
+		</div>
+
+    <div role="tabpanel" class="tab-pane" id="sine">
+	<h2 id="sine_wave">Sine Wave</h2>
+        <img src="sinewave.png" class="center-block img-responsive" alt="sine wave simulation">
+		<img src="sineResults.png" class="center-block img-responsive" alt="sine wave results">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion4" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour1">1. Generating Integers</a>
+                </h4>
+            </div>
+            <div id="collapseFour1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, we generate a float x once which will loop for the remainder of the simulation</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour2">2. Cloning</a>
+                </h4>
+            </div>
+            <div id="collapseFour2" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>The x value is cloned so that we can transform it into sine data and still continue the feedback loop</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour3">3. Choosing to split</a>
+                </h4>
+            </div>
+            <div id="collapseFour3" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>We want to generate 100 points so we check if x < 100. If it is then we continue the loop</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">4. Transformations</a>
+                </h4>
+            </div>
+            <div id="collapseFour4" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>Past the cloner two things happen. One x value gets passed into our sine function and then goes to sink to be measured. The other x value gets incremented by 1 after is clears the func splitter so that we expand our domain.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour5">5. Graphing</a>
+                </h4>
+            </div>
+            <div id="collapseFour5" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>We want to graph x at the thermometer <em>measure</em> and at the sink <em>function</em> and throw them into a line graph. You will see our x values increase linearly over time and you should see a sine function appear as well!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source creates 1 float to be passed to the function. </p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+        				<p class = "media-left" style="text-align:left;">Since entities cannot connect back to themselves, a reverser is necessary to allow a path from the function block to the thermometer.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+        				<p class = "media-left" style="text-align:left;">Measures our domain over time (should go 1 to 100)</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+        				<p class = "media-left" style="text-align:left;">We do a simple increment on x using native functions and we use our advanced feature with the <code>eval()</code> statement to allow for the <code>Math.sin()</code> call.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+        				<p class = "media-left" style="text-align:left;">This entity evaluates incoming x values to make sure that it is less than 100 that way we have a terminate condition in our feedback loop.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sinks act as terminal points and points for measuring the since wave.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/cloner.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Cloner</h4>
+        				<p class = "media-left" style="text-align:left;">The cloner copies our x values so that one becomes our sine point and one continues the loop.</p>
+        			</div>
+        		</div>
+        	</div>
+		</div>
+	</div>
+    <div role="tabpanel" class="tab-pane" id="primitiveRoots">
+	<h2 id="primitiveRoots">Primitive Roots</h2>
+        <img src="primitiveRoots.png" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion4" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour1">1. Generating Integers</a>
+                </h4>
+            </div>
+            <div id="collapseFour1" class="panel-collapse collapse in">
+                <div class="panel-body">
+					<p>Generate the number 3 and a counter integer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour2">2. Function</a>
+                </h4>
+            </div>
+            <div id="collapseFour2" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>We multiply our <code>exp</code> variable by 3 and then take the modulus with base 7. Effectively, 
+					we are accomplishing <code>exp**3 mod 7</code>. We also increment our loop value so that we have a terminating condition</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour3">3. Choosing to split</a>
+                </h4>
+            </div>
+            <div id="collapseFour3" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>If the <code<iter</code> variable == 6 == (7 - 1) then we should terminate the simulation</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">4. Graphing Results</a>
+                </h4>
+            </div>
+            <div id="collapseFour4" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>We can then graph <code>exp</code> and we will see that (not in order) every value [1, 7-1] is hit by <code>exp</code>. This is exactly what a primitive root does. This number theory is the basis of the <a href="http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie-Hallman key exchange algorithm</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source creates 1 int UDO to loop and another int to actually be the values generated from the primitive root generator.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+        				<p class = "media-left" style="text-align:left;">Since entities cannot connect back to themselves, a reverser is necessary to allow a path from the function block to the thermometer.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+        				<p class = "media-left" style="text-align:left;">Measures our <code>exp</code> variable.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+        				<p class = "media-left" style="text-align:left;">We increment our loop variable so that we have an end condition and the <code>exp</code> variable gets updated via the function <code>exp**3 % 7</code> effectively.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+        				<p class = "media-left" style="text-align:left;">This entity evaluates incoming x values to make sure that it is less than 100 that way we have a terminate condition in our feedback loop.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sinks act as terminal points and points for measuring the since wave.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/queue.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Queue</h4>
+        				<p class = "media-left" style="text-align:left;">Queue serves no purpose other than to buffer the data so that values are space nicely in the graph and the simulation tool does not loop in the feedback loop too fast.</p>
+        			</div>
+        		</div>
+        	</div>
+		</div>
+
+
+    <div role="tabpanel" class="tab-pane" id="collegePathways">
+    	<h2 id="bankTeller">College Pathways</h2>
+        <img src="CollegePathways.PNG" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+            <h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion6" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix1">1. Creating the populations</a>
+                </h4>
+            </div>
+            <div id="collapseSix1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, a number of students are generated, with SAT scores represented on a scle of 1 to 10.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix2">2. Entering higher education</a>
+                </h4>
+            </div>
+            <div id="collapseSix2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> Based on their SAT scores, students either go to community college or university. Community college has a maximum enrollment of twenty thousand, and university has a maximum enrollment of 40,000. When the students cannot get into school due to enrollment limits, they drop out of the simulation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix3">3. Did you pass?</a>
+                </h4>
+            </div>
+            <div id="collapseSix3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> Students loop through multiple semesters of college. They need to pass 8 semesters, and they only have 12 semesters to do so. The higher their SAT scores, the more likeley they are to pass. Luckily for community college students (lower SAT scores), community college is half as hard. </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix4">4. Are we done?</a>
+                </h4>
+            </div>
+            <div id="collapseSix4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Eventually, all students exit their loops. If they pass eight semesters, they end up employed. Students who go though twelve semesters without passing eight semesters end up unemployed.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix5">5. Measuring the data</a>
+                </h4>
+            </div>
+            <div id="collapseSix5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> Queues (the schools) and sinks record data about students that flow through them, allowing you to track students through their carreers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-5">
+            <h3 style="text-align:left;">Entities used:</h3>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/source.png" alt=""  height="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+                        <p class = "media-left" style="text-align:left;">The source represents the initial population of the predators and prey. It loads three UDOs: NumRabbits, NumFoxes, and MaxGenerations.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+                        <p class = "media-left" style="text-align:left;">The reverser helps the simulation to have visual clarity.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+                        <p class = "media-left" style="text-align:left;">The thermometer measures the current population ratio of the predator/prey.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+                        <p class = "media-left" style="text-align:left;">The two function blocks raise and lower the populations. If the number of rabbits is greater than the number of foxes, then the rabbit population is decreased and the fox population is increased. Otherwise, the inverse occurs. Each time the data passes through the function blocks, the current generation count is incremented.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+                        <p class = "media-left" style="text-align:left;">This entity evaluates the incoming UDOs. If the current generation number is greater than or equal to the MaxGeneration, then it sends the UDOs to the sink. Otherwise, they loop again.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class = "media-left media-middle">
+                        <img class = "media-object" src="../images/sink.png" alt="" height="64">
+                    </div>
+                    <div class = "media-body">
+                        <h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+                        <p class = "media-left" style="text-align:left;">The sink accepts the final population output.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="predatorPrey">
+    	<h2 id="bankTeller">Predator-Prey</h2>
+        <img src="PredatorPrey2.png" class="center-block img-responsive" alt="">
+        <h3 id="bankTeller">Predator-Prey Graph</h2>
+        <img src="PredatorPrey2Graph.png" class="center-block img-responsive" alt="">
+        <div class="col-md-7">
+        	<h3 style="text-align:left;">Walkthrough:</h3>
+        <div class="panel-group" id="accordion6" style="text-align:left;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix1">1. Creating the populations</a>
+                </h4>
+            </div>
+            <div id="collapseSix1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>Once the simulation starts, the number of rabbits, number of foxes, and max generation count is randomly generated.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix2">2. Entering the Queue</a>
+                </h4>
+            </div>
+            <div id="collapseSix2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> For performance reasons, the population enters a queue to start the loop.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix3">3. Adjusting the population ratio</a>
+                </h4>
+            </div>
+            <div id="collapseSix3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> The populations are adjusted! More prey means more predators, but more predators means less prey! The function blocks adjust the ratio and increments the generation count.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix4">4. Are we done?</a>
+                </h4>
+            </div>
+            <div id="collapseSix4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>At this stage, the current generation count is compared to the max generation count. If the current count is less than the max, the data is sent to the thermometer. Otherwise, it is sent to the sink.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix5">5. Measuring the data</a>
+                </h4>
+            </div>
+            <div id="collapseSix5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> The thermometer measures the ratio at the current iteration of the loop! This lets us view the growth and fall of populations over time.</p>
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix6">6. Looping</a>
+                </h4>
+            </div>
+            <div id="collapseSix6" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>At this point, the integer begins the loop starting with Step 2. Populations enter the queue, have their values adjusted, are measured, and repeat until the current generation count equals the max generation account.</p>
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix7">7. Exiting the Loop</a>
+                </h4>
+            </div>
+            <div id="collapseSix7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Once the current generation count equals the maximum generation count, the simulation is done!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-5">
+        	<h3 style="text-align:left;">Entities used:</h3>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/source.png" alt=""  height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Source</h4>
+        				<p class = "media-left" style="text-align:left;">The source represents the initial population of the predators and prey. It loads three UDOs: NumRabbits, NumFoxes, and MaxGenerations.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/reverser.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Reverser</h4>
+        				<p class = "media-left" style="text-align:left;">The reverser helps the simulation to have visual clarity.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/thermometer.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Thermometer</h4>
+        				<p class = "media-left" style="text-align:left;">The thermometer measures the current population ratio of the predator/prey.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/func.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Function</h4>
+        				<p class = "media-left" style="text-align:left;">The two function blocks raise and lower the populations. If the number of rabbits is greater than the number of foxes, then the rabbit population is decreased and the fox population is increased. Otherwise, the inverse occurs. Each time the data passes through the function blocks, the current generation count is incremented.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/splitfunc.png" alt="" height="64" width="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Splitter</h4>
+        				<p class = "media-left" style="text-align:left;">This entity evaluates the incoming UDOs. If the current generation number is greater than or equal to the MaxGeneration, then it sends the UDOs to the sink. Otherwise, they loop again.</p>
+        			</div>
+        		</div>
+        		<div class="media">
+        			<div class = "media-left media-middle">
+        				<img class = "media-object" src="../images/sink.png" alt="" height="64">
+        			</div>
+        			<div class = "media-body">
+        				<h4 class="media-heading" style="text-align:left;"><br/>Sink</h4>
+        				<p class = "media-left" style="text-align:left;">The sink accepts the final population output.</p>
+        			</div>
+        		</div>
+        	</div>
+		</div>
+ 
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+       </div>
+    </div><!-- /.container -->
+   
+    
+ 	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">BLUESIM is free, open source, and licensed under LPGL.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
