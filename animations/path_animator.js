@@ -268,7 +268,7 @@ function runPathFlowAnimation() {
 	for (var i = 0; i < paths.length; i++) {
 		runAnimations(paths[i], paths[i].name); 
 	}
-	//runCompute();
+	runCompute();
 }
 
 
